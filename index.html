@@ -4,9 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>11ty</title>
+
+		<style @raw="getBundle('css')" webc:keep></style>
 	</head>
 
 	<body>
 		<h1>Hello</h1>
+		<dsd-test>
+			Slotted into light DOM
+			<p slot="shadow">Slotted into shadow DOM</p>
+		</dsd-test>
 	</body>
 </html>
