@@ -1,0 +1,22 @@
+<div webc:root="override">
+	<template shadowrootmode="open">
+		<p>Inside the shadow-root</p>
+		
+		<slot webc:keep>This is the shadow DOM slot</slot>
+		<slot name="shadow">This is the WebC slot?</slot>
+
+		<!-- paragraphs inside shadow-root will be italic -->
+		<style webc:keep>
+			p { font-style: italic; }
+		</style>
+	</template>
+
+	<p>Outside the shadow-root</p>
+	
+	<slot>WebC slot outside the shadow-root</slot>
+</div>
+
+<!-- paragraphs in this file outside the shadow-root will be bold -->
+<style webc:scoped>
+	p { font-weight: bold; }
+</style>
